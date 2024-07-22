@@ -10,6 +10,7 @@ MJ - mohammadjavadasnaashari@gmail.com
 
 - Based on Ubuntu
 - Installs Apache2
+- Installs PHP 7.4
 - Includes Vim for any command-line text editing needs
 
 ## Usage
@@ -18,4 +19,9 @@ MJ - mohammadjavadasnaashari@gmail.com
 
    ```bash
    docker build -t apache2-ubuntu .
+
+2. **Run the Docker image:**
+
+   ```bash
+   docker run -d -it -p 8080:80 -v $(pwd)/info.php:/var/www/html/info.php apache2-ubuntu
 
